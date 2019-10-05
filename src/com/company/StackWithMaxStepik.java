@@ -1,14 +1,17 @@
 package com.company;
 
 
-import jdk.nashorn.internal.ir.IdentNode;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
 
-public class StackWithMax {
+/**
+ * Стек с поддержкой максимума
+ * Реализовать стек с поддержкой операций push, pop и max.
+ * Вход. Последовательность запросов push, pop и max .
+ * Выход. Для каждого запроса max вывести максимальное
+ * число, находящее на стеке
+ */
+public class StackWithMaxStepik {
     Stack<Integer> stack = new Stack<>();
     Stack<Integer> stackMaximum = new Stack<>();
 
@@ -35,7 +38,7 @@ public class StackWithMax {
 
     public static void main(String[] args) {
 
-        StackWithMax stack = new StackWithMax();
+        StackWithMaxStepik stack = new StackWithMaxStepik();
         Scanner in = new Scanner(System.in);
         StringBuilder result = new StringBuilder();
         int count = in.nextInt();

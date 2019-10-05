@@ -6,7 +6,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 
-/*
+/**
 *Найти максимум в каждом окне размера m данного массива чисел
 * A[1 . . . n].
 * Вход. Массив чисел A[1 . . . n] и число 1 ≤ m ≤ n.
@@ -14,7 +14,7 @@ import java.util.Stack;
 * i ≤ n − m + 1.
 *
 */
-public class MaxInWindow {
+public class MaxInWindowStepik {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int size = in.nextInt();

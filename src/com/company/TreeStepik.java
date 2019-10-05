@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-/*
+/**
  * Вычислить высоту данного дерева.
  * Вход. Корневое дерево с вершинами {0, . . . , n−1}, заданное
  * как последовательность parent 0 , . . . , parent n−1 , где parent i —
@@ -12,13 +12,13 @@ import java.util.Scanner;
  * Выход. Высота дерева.
  */
 
-public class Tree {
+public class TreeStepik {
 
     private int size;
     private Node[] listNode;
     private int root;
 
-    public Tree(int size) {
+    public TreeStepik(int size) {
         this.size = size;
         listNode = new Node[size];
     }
@@ -62,12 +62,12 @@ public class Tree {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int size = in.nextInt();
-        Tree tree = new Tree(size);
+        TreeStepik treeStepik = new TreeStepik(size);
         for (int i = 0; i < size; i++) {
-            tree.addNode(i, in.nextInt());
+            treeStepik.addNode(i, in.nextInt());
         }
-        tree.printTree(tree.getRoot());
-        System.out.println((tree.getHeight(tree.getRoot()) + 1));
+        treeStepik.printTree(treeStepik.getRoot());
+        System.out.println((treeStepik.getHeight(treeStepik.getRoot()) + 1));
     }
 
     class Node {

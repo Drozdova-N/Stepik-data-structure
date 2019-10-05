@@ -1,17 +1,29 @@
 package com.company;
 
-import com.sun.org.apache.bcel.internal.generic.ARETURN;
-
 import java.util.*;
 
-public class NetworkPacket {
+
+/**
+ * Обработка сетевых пакетов
+ * Реализовать обработчик сетевых пакетов.
+ * Вход. Размер буфера size и число пакетов n, а так-
+ * же две последовательности arrival 1 , . . . , arrival n и
+ * duration 1 , . . . , duration n , обозначающих время поступ-
+ * ления и длительность обработки n пакетов.
+ * Выход. Для каждого из данных n пакетов необходимо
+ * вывести время начала его обработки или −1, если пакет
+ * не был обработан (это происходит в случае, когда пакет
+ * поступает в момент, когда в буфере компьютера уже
+ * находится size пакетов).
+ */
+public class NetworkPacketStepik {
 
     private int maxSizeBuffer;
     private int currentSize = 0;
     private Node headNode;
     private Node tailNode;
 
-    public NetworkPacket(int maxSizeBuffer) {
+    public NetworkPacketStepik(int maxSizeBuffer) {
         this.maxSizeBuffer = maxSizeBuffer;
     }
 
@@ -82,19 +94,19 @@ public class NetworkPacket {
         int countPacket = in.nextInt();
         int[] result = new int[countPacket];
         int time = 0;
-        NetworkPacket networkPacket = new NetworkPacket(sizeBuffer);
+        NetworkPacketStepik networkPacketStepik = new NetworkPacketStepik(sizeBuffer);
 
         for (int i = 0; i < countPacket; i++) {
             Packet packet = new Packet(in.nextInt(), in.nextInt());
-            if (networkPacket.addPacket(packet)) {
+            if (networkPacketStepik.addPacket(packet)) {
                 if (time < packet.getArrival()) time = packet.getArrival();
                 result[i] = time; // начало выполнения i-го пакета
                 time += packet.getDuration();
                 packet.setFinish(time); // завершение выполнения пакета
             } else {
-                if (packet.getArrival() >= networkPacket.peek().getFinish()) {
-                    networkPacket.poll();
-                    networkPacket.addPacket(packet);
+                if (packet.getArrival() >= networkPacketStepik.peek().getFinish()) {
+                    networkPacketStepik.poll();
+                    networkPacketStepik.addPacket(packet);
                     if (time < packet.getArrival()) time = packet.getArrival();
                     result[i] = time;
                     time += packet.getDuration();
