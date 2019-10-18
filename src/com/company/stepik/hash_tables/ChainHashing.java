@@ -3,6 +3,15 @@ package com.company.stepik.hash_tables;
 import java.util.LinkedList;
 import java.util.Scanner;
 
+/**
+ * Хеширование цепочками — один из наи-
+ * более популярных методов реализации
+ * хеш-таблиц на практике. Ваша цель в дан-
+ * ной задаче — реализовать такую схему, ис-
+ * пользуя таблицу с m ячейками и полино-
+ * миальной хеш-функцией на строках
+ */
+
 public class ChainHashing {
     private final int p = 1000000007;
     private final int X = 263;

@@ -72,7 +72,8 @@ public class AlgorithmKarpRabin {
         for (int i = sizeArray - 2; i >= 0; i--) {
             int asciiCharINew = text.charAt(i);
             int asciiCharIOld = text.charAt(i + sizePattern);
-            hashText[i] = ((((((hashText[i + 1] % p - (asciiCharIOld * powerX[sizePattern - 1]) % p)) * this.X) % p + asciiCharINew * powerX[0] % p) % p) + p) % p;
+            hashText[i] = ((((((hashText[i + 1] % p - (asciiCharIOld * powerX[sizePattern - 1]) % p)) * this.X) % p
+                    + asciiCharINew * powerX[0] % p) % p) + p) % p;
 
         }
     }

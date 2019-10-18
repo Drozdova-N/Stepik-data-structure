@@ -43,6 +43,9 @@ public class PhoneBook {
 //    }
 
 
+    /**прямая адресация
+     */
+
     private int size;
     private Node[] arrayPhone;
     private int M = 100_000;
