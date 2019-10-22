@@ -17,7 +17,7 @@ public class OrderBinaryTree {
     }
 
     public void addNode(int key, int childLeft, int childRight) {
-        if (iterator < tree.length) ;
+        if (iterator < tree.length)
         tree[iterator++] = new Node(key, childLeft, childRight);
     }
     public void in_order(Node node) {
