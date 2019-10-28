@@ -1,12 +1,27 @@
 package com.company.stepik.tree_search;
+
 import java.util.Scanner;
+
+/**
+ * 1_ Вход. Двоичное дерево.
+ * Выход. Проверить, является ли оно корректным деревом
+ * поиска: верно ли, что для любой вершины дерева её ключ
+ * больше всех ключей в левом поддереве данной вершины и
+ * меньше всех ключей в правом поддереве.
+ * <p>
+ * 2_ Дереву разрешается содержать
+ * равные ключи, но они всегда должны находиться в правом поддереве.
+ */
+
 public class IsTreeSearch {
 
-    private Node[] tree;
-    private int size;
+    private final Node[] tree;
+    private final int size;
     private int iterator = 0;
     private long min = Long.MIN_VALUE;
+    private long min_2 = Long.MIN_VALUE;
     boolean result = true;
+    boolean result_2 = true;
 
     public IsTreeSearch(int size) {
         this.size = size;
@@ -25,6 +40,21 @@ public class IsTreeSearch {
         return result;
     }
 
+    public boolean isTreeSearch_2() {
+        if (size == 0) return true;
+        in_order_2(tree[0]);
+        return result_2;
+    }
+
+    private void in_order_2(Node node) {
+        if (node.leftChild != -1) in_order_2(tree[node.leftChild]);
+        if (min_2 > node.key) result_2 = false;
+        if (min_2 == node.key && node.leftChild != -1) {
+            if (tree[node.leftChild].key == node.key)
+                result_2 = false;
+        } else min_2 = node.key;
+        if (node.rightChild != -1) in_order_2(tree[node.rightChild]);
+    }
 
     private void in_order(Node node) {
         if (node.leftChild != -1) in_order(tree[node.leftChild]);
@@ -45,6 +75,7 @@ public class IsTreeSearch {
             this.rightChild = rightChild;
         }
     }
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int size = in.nextInt();
@@ -52,6 +83,6 @@ public class IsTreeSearch {
         for (int i = 0; i < size; i++) {
             tree.addNode(in.nextLong(), in.nextInt(), in.nextInt());
         }
-        System.out.println(tree.isTreeSearch() ? "CORRECT" : "INCORRECT");
+        System.out.println(tree.isTreeSearch_2() ? "CORRECT" : "INCORRECT");
     }
 }
