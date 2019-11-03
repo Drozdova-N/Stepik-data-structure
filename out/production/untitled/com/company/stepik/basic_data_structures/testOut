@@ -1,0 +1,201 @@
+0
+end
+0
+_____________
+delete i = 364109675
+end
+0
+_____________
+Not found
+end
+0
+_____________
+Not found
+end
+0
+_____________
+delete i = 384851838
+end
+0
+_____________
+Not found
+end
+0
+_____________
+Not found
+end
+0
+_____________
+0
+end
+0
+_____________
+0
+end
+0
+_____________
+0
+end
+0
+_____________
+0
+end
+0
+_____________
+insert i = 554939149
+key: 554939149 height: 1 balance: 0
+0
+_____________
+insert i = 300593336
+key: 300593336 height: 1 balance: 0
+key: 554939149 height: 2 balance: 1
+0
+_____________
+insert i = 595570265
+key: 300593336 height: 1 balance: 0
+key: 554939149 height: 2 balance: 0
+key: 595570265 height: 1 balance: 0
+0
+_____________
+l=146900570  r=390853981
+300593336
+key: 300593336 height: 1 balance: 0
+key: 554939149 height: 2 balance: 0
+key: 595570265 height: 1 balance: 0
+300593336
+_____________
+insert i = 712580963
+key: 300593336 height: 1 balance: 0
+key: 554939149 height: 3 balance: -1
+key: 595570265 height: 2 balance: -1
+key: 712580963 height: 1 balance: 0
+300593336
+_____________
+delete i = 554939149
+key: 300593336 height: 1 balance: 0
+key: 595570265 height: 2 balance: 0
+key: 712580963 height: 1 balance: 0
+300593336
+_____________
+insert i = 527913028
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 712580963 height: 1 balance: 0
+300593336
+_____________
+Not found
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 712580963 height: 1 balance: 0
+300593336
+_____________
+Found
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 712580963 height: 1 balance: 0
+300593336
+_____________
+insert i = 977975530
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 712580963 height: 2 balance: -1
+key: 977975530 height: 1 balance: 0
+300593336
+_____________
+Found
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 712580963 height: 2 balance: -1
+key: 977975530 height: 1 balance: 0
+300593336
+_____________
+insert i = 929644014
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 712580963 height: 1 balance: 0
+key: 929644014 height: 2 balance: 0
+key: 977975530 height: 1 balance: 0
+300593336
+_____________
+l=142151811  r=518103735
+300593336
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 712580963 height: 1 balance: 0
+key: 929644014 height: 2 balance: 0
+key: 977975530 height: 1 balance: 0
+300593336
+_____________
+delete i = 712580963
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 929644014 height: 2 balance: -1
+key: 977975530 height: 1 balance: 0
+300593336
+_____________
+l=300593336  r=977975530
+3331696173
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 929644014 height: 2 balance: -1
+key: 977975530 height: 1 balance: 0
+3331696173
+_____________
+l=280544957  r=288527231
+0
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 0
+key: 929644014 height: 2 balance: -1
+key: 977975530 height: 1 balance: 0
+0
+_____________
+delete i = 929644014
+key: 300593336 height: 2 balance: -1
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 977975530 height: 1 balance: 0
+0
+_____________
+insert i = 364027698
+key: 300593336 height: 1 balance: 0
+key: 364027698 height: 2 balance: 0
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 977975530 height: 1 balance: 0
+0
+_____________
+l=674697217  r=752227904
+0
+key: 300593336 height: 1 balance: 0
+key: 364027698 height: 2 balance: 0
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 977975530 height: 1 balance: 0
+0
+_____________
+l=300593336  r=977975530
+2766079857
+key: 300593336 height: 1 balance: 0
+key: 364027698 height: 2 balance: 0
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 977975530 height: 1 balance: 0
+2766079857
+_____________
+Not found
+key: 300593336 height: 1 balance: 0
+key: 364027698 height: 2 balance: 0
+key: 527913028 height: 1 balance: 0
+key: 595570265 height: 3 balance: 1
+key: 977975530 height: 1 balance: 0
+2766079857
