@@ -9,8 +9,6 @@ public class AVLTree {
     private Node headNode;
     private long sum = 0;
     private final int CONST_MOD = 1_000_000_001;
-    private int l;
-    private int r;
 
     public void insert(int i) {
         headNode = insert(headNode, func(i));
@@ -26,11 +24,11 @@ public class AVLTree {
         long sum = 0;
         if (headNode == null)
             return sum;
-        this.l = func(l);
-        this.r = func(r);
+        l = func(l);
+        r = func(r);
         //System.out.format("l=%d  r=%d\n", this.l, this.r);
-        Node[] nodesSplitL = split(headNode, this.l); // nodesSplitL[0] -> min.... l-1; nodesSplitLх[1] -> l .... max
-        Node[] nodesSplitR = split(nodesSplitL[1], this.r + 1); // nodesSplitR[0] -> l .....r-1; nodesSplitR[1] -> r .... max
+        Node[] nodesSplitL = split(headNode, l); // nodesSplitL[0] -> min.... l-1; nodesSplitLх[1] -> l .... max
+        Node[] nodesSplitR = split(nodesSplitL[1], r + 1); // nodesSplitR[0] -> l .....r-1; nodesSplitR[1] -> r .... max
         sum = orderForSum(nodesSplitR[0]);
         merge(nodesSplitL[0], nodesSplitR[0]);
         merge(headNode, nodesSplitR[1]);
@@ -64,9 +62,7 @@ public class AVLTree {
     }
 
     public void printTree() {
-        if (headNode != null)
-            in_order(headNode);
-        else System.out.println("end");
+        if (headNode != null) in_order(headNode);
     }
 
     private Node insert(Node node, int i) {
