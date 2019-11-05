@@ -4,33 +4,33 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-
-public class AVLTree {
+ class AVLTree {
     private Node headNode;
     private long sum = 0;
     private final int CONST_MOD = 1_000_000_001;
-    private int l;
-    private int r;
+
+
 
     public void insert(int i) {
         headNode = insert(headNode, func(i));
-     //   System.out.println("insert i = " + func(i));
+   System.out.println("insert i = " + func(i));
     }
 
     public void delete(int i) {
         headNode = delete(headNode, func(i));
-      //  System.out.println("delete i = " + func(i));
+     System.out.println("delete i = " + func(i));
     }
 
     public long sum(int l, int r) {
         long sum = 0;
+
         if (headNode == null)
             return sum;
-        this.l = func(l);
-        this.r = func(r);
-        //System.out.format("l=%d  r=%d\n", this.l, this.r);
-        Node[] nodesSplitL = split(headNode, this.l); // nodesSplitL[0] -> min.... l-1; nodesSplitLх[1] -> l .... max
-        Node[] nodesSplitR = split(nodesSplitL[1], this.r + 1); // nodesSplitR[0] -> l .....r-1; nodesSplitR[1] -> r .... max
+        l = func(l);
+        r = func(r);
+      System.out.format("l=%d  r=%d\n", l, r);
+        Node[] nodesSplitL = split(headNode, l); // nodesSplitL[0] -> min.... l-1; nodesSplitLх[1] -> l .... max
+        Node[] nodesSplitR = split(nodesSplitL[1], r + 1); // nodesSplitR[0] -> l .....r-1; nodesSplitR[1] -> r .... max
         //  sum = orderForSum(nodesSplitR[0]);
         sum = nodesSplitR[0]==null?0:nodesSplitR[0].getSum();
         merge(nodesSplitL[0], nodesSplitR[0]);
@@ -67,7 +67,7 @@ public class AVLTree {
     public void printTree() {
         if (headNode != null)
             in_order(headNode);
-        else System.out.println("end");
+
     }
 
     private Node insert(Node node, int i) {
@@ -212,11 +212,13 @@ public class AVLTree {
         } else if (height(treeLeft) > height(treeRight)) {
             Node temp = mergeWithRoot(treeLeft.getRightChild(), treeRight, root);
             treeLeft.setRightChild(temp);
+            treeLeft.setSum(treeLeft.key+sumNode(treeLeft.getLeftChild())+sumNode(treeLeft.getRightChild()));
             return rebalance(treeLeft);
 
         } else {
             Node temp = mergeWithRoot(treeLeft, treeRight.getLeftChild(), root);
             treeRight.setLeftChild(temp);
+            treeRight.setSum(treeRight.key+sumNode(treeRight.getLeftChild())+sumNode(treeRight.getRightChild()));
             return rebalance(treeRight);
 
         }
@@ -256,17 +258,17 @@ public class AVLTree {
                 case "s":
                     long s = tree1.sum(Integer.parseInt(value[1]), Integer.parseInt(value[2]));
                     tree1.setSum(s);
-                    System.out.println(s);
+                    System.out.println("sum = :"+s);
                     break;
                 default:
                     throw new RuntimeException(operation);
             }
-//            System.out.println("______");
-//            tree1.printTree();
-//            System.out.println("______");
+            System.out.println("______");
+            tree1.printTree();
+            System.out.println("______");
+
 
         }
-
     }
 
     class Node {
