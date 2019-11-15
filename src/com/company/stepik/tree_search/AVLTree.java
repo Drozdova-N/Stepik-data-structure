@@ -31,7 +31,6 @@ import java.io.InputStreamReader;
       System.out.format("l=%d  r=%d\n", l, r);
         Node[] nodesSplitL = split(headNode, l); // nodesSplitL[0] -> min.... l-1; nodesSplitLх[1] -> l .... max
         Node[] nodesSplitR = split(nodesSplitL[1], r + 1); // nodesSplitR[0] -> l .....r-1; nodesSplitR[1] -> r .... max
-        //  sum = orderForSum(nodesSplitR[0]);
         sum = nodesSplitR[0]==null?0:nodesSplitR[0].getSum();
         merge(nodesSplitL[0], nodesSplitR[0]);
         merge(headNode, nodesSplitR[1]);
